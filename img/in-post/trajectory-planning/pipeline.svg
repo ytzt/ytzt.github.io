@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260" role="img" aria-labelledby="title desc">
+  <title id="title">轨迹规划系统数据流</title>
+  <desc id="desc">从传感器到状态估计、轨迹规划、轨迹跟踪和执行器的数据流，以及环境地图反馈。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#365486"/></marker></defs>
+  <rect width="900" height="260" rx="16" fill="#f5f8fc"/>
+  <g font-family="sans-serif" font-size="18" text-anchor="middle">
+    <g fill="#dceafe" stroke="#365486" stroke-width="2"><rect x="28" y="90" width="135" height="60" rx="10"/><rect x="195" y="90" width="135" height="60" rx="10"/><rect x="362" y="90" width="135" height="60" rx="10"/><rect x="529" y="90" width="135" height="60" rx="10"/><rect x="696" y="90" width="135" height="60" rx="10"/></g>
+    <g fill="#183b56"><text x="95" y="126">传感器 / 定位</text><text x="262" y="126">状态估计</text><text x="429" y="126">轨迹规划</text><text x="596" y="126">轨迹跟踪</text><text x="763" y="126">执行器</text></g>
+    <g stroke="#365486" stroke-width="3" fill="none" marker-end="url(#arrow)"><path d="M163 120h28"/><path d="M330 120h28"/><path d="M497 120h28"/><path d="M664 120h28"/><path d="M430 90V42H262V90"/></g>
+    <text x="346" y="31" fill="#365486">环境地图 / 约束反馈</text>
+  </g>
+</svg>
