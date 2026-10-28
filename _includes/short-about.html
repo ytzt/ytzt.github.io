@@ -12,3 +12,12 @@
     {% include sns-links.html %}
   </div>
 </section>
+<script>
+  (function () {
+    var el = document.getElementById('days-to-2030');
+    if (!el) return;
+    var target = new Date('2030-01-01T00:00:00+08:00');
+    var days = Math.ceil((target - new Date()) / 86400000);
+    el.textContent = days > 0 ? days : 0;
+  })();
+</script>

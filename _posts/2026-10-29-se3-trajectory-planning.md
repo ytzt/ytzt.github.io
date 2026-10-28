@@ -160,8 +160,7 @@ $$
 - 恒速阶段
 $$
 \begin{aligned}
-q(t)       &= q_0 + v_0 T_a + \frac{1}{2}a_{\rm a}T_a^{2}
-              + v_{\rm v}\!\left(t - t_0 - \frac{T_a}{2}\right), \\[4pt]
+q(t)       &= q_0 + v_0 T_a + \frac{1}{2}a_{\rm a}T_a^{2} + v_{\rm v}\!\left(t - t_0 - \frac{T_a}{2}\right), \\[4pt]
 \dot q(t)  &= v_{\rm v}, \\[4pt]
 \ddot q(t) &= 0.
 \end{aligned}
@@ -533,9 +532,7 @@ $$u_{k+1} = u_{k} + \frac{v_{k}T_{s}}{\;\left\|\dfrac{\mathrm{d}\boldsymbol{p}}{
 - 推导过程
 两边点乘切向量
 $$\left(\frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}u} \cdot \frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}u}\right)\ddot{u} = \frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}u} \cdot \left(\boldsymbol{a} - \frac{\mathrm{d}^{2}\boldsymbol{p}}{\mathrm{d}u^{2}}\,\dot{u}^{2}\right)$$
-$$\ddot{u} = \frac{1}{\left\|\dfrac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}u}\right\|^{2}}\left[\dfrac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}u} \cdot \boldsymbol{a}
-- \left(
-\dfrac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}u} \cdot \dfrac{\mathrm{d}^{2}\boldsymbol{p}}{\mathrm{d}u^{2}}\right)\dot{u}^{2}\right]$$
+$$\ddot{u} = \frac{1}{\left\|\dfrac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}u}\right\|^{2}}\left[\dfrac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}u} \cdot \boldsymbol{a} - \left(\dfrac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}u} \cdot \dfrac{\mathrm{d}^{2}\boldsymbol{p}}{\mathrm{d}u^{2}}\right)\dot{u}^{2}\right]$$
 
 - 通过几何路径对U积分得到路径的几何长度，然后根据双S曲线规划得到期望速度曲线V（t)，对U(t)进行泰勒展开计算期望的运动率，进而计算期望的轨迹。
 
