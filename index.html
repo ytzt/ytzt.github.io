@@ -1,6 +1,6 @@
 ---
 layout: page
-description: "「离开世界之前 一切都是过程」"
+description: "科技是有生命的，静下心来倾听科技，努力帮助其实现"
 ---
 
 {% for post in paginator.posts %}
@@ -44,3 +44,38 @@ description: "「离开世界之前 一切都是过程」"
     {% endif %}
 </ul>
 {% endif %}
+
+<!-- 首页标语逐字弹出效果 -->
+<style>
+    .type-cursor {
+        font-weight: 300;
+        opacity: 1;
+        animation: type-blink 0.9s step-start infinite;
+    }
+    @keyframes type-blink {
+        50% { opacity: 0; }
+    }
+</style>
+<script>
+    (function () {
+        var el = document.querySelector('header.intro-header .site-heading .subheading');
+        if (!el) return;
+        var text = el.textContent.trim();
+        if (!text) return;
+        var i = 0;
+        el.textContent = '';
+        var cursor = document.createElement('span');
+        cursor.className = 'type-cursor';
+        cursor.textContent = '|';
+        el.appendChild(cursor);
+        (function type() {
+            if (i < text.length) {
+                // 把光标插到当前文字后面，逐字追加
+                el.insertBefore(document.createTextNode(text.charAt(i++)), cursor);
+                setTimeout(type, 180);
+            } else {
+                setTimeout(function () { cursor.style.display = 'none'; }, 1500);
+            }
+        })();
+    })();
+</script>
