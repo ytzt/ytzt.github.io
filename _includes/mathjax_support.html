@@ -10,6 +10,7 @@
     }
   };
 </script>
+<!-- 自托管 MathJax：cdn.jsdelivr.net 在国内网络（尤其手机流量）经常无法访问，
+     会导致公式原样显示 LaTeX。放在仓库里可保证任何网络环境都能加载。 -->
 <script async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script>
+        src="{{ site.baseurl }}/js/mathjax/tex-svg-full.js"></script>
