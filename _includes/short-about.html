@@ -16,8 +16,14 @@
   (function () {
     var el = document.getElementById('days-to-2030');
     if (!el) return;
-    var target = new Date('2030-01-01T00:00:00+08:00');
-    var days = Math.ceil((target - new Date()) / 86400000);
-    el.textContent = days > 0 ? days : 0;
+    // 目标时刻：2030-01-01 00:00（东八区）
+    var target = new Date('2030-01-01T00:00:00+08:00').getTime();
+    function render() {
+      var days = Math.ceil((target - Date.now()) / 86400000);
+      el.textContent = days > 0 ? days : 0;
+    }
+    render();
+    // 每分钟重算一次：页面一直开着跨天时也能自动更新
+    setInterval(render, 60000);
   })();
 </script>
